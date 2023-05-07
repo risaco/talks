@@ -75,6 +75,15 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   align-items: center;
 }
 
+.two-column-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.two-column-content .small, .two-column-content .smaller {
+  line-height: 2;
+}
+
 .small {
   font-size: 80% !important;
 }
@@ -103,6 +112,20 @@ section.has-dark-background, section.has-dark-background h1, section.has-dark-ba
   position: absolute;
   top: 25%;
   left: 35%;
+}
+
+.reveal .decor {
+  color: var(--r-link-color);
+}
+.reveal .decor--bold {
+  font-weight: bold;
+}
+.reveal .decor--italic {
+  font-style: italic;
+}
+.reveal .decor--emphasis {
+  font-weight: bold;
+  font-style: italic;
 }
 
 .reveal-viewport {

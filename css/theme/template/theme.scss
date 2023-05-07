@@ -33,6 +33,17 @@
 	flex-direction: row;
 	align-items: center; }
 
+.two-column-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	& .small,
+	& .smaller {
+		line-height: 2;
+	}
+}
+
 .small {
 	font-size: 80% !important; }
 
@@ -56,6 +67,27 @@
 	position: absolute;
 	top: 25%;
 	left: 35%; }
+
+// --- Highlight text with a decor class ---
+// decor, decor--bold, decor--italic
+// decor--emphasis: bold + italic
+
+.reveal .decor {
+	color: var(--r-link-color);
+
+	&--bold {
+		font-weight: bold;
+	}
+
+	&--italic {
+		font-style: italic;
+	}
+
+	&--emphasis {
+		font-weight: bold;
+		font-style: italic;
+	}
+}
 
 // --- Reveal.js Base Styles ---
 .reveal-viewport {
