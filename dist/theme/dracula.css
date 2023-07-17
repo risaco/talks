@@ -46,6 +46,95 @@ section.has-light-background, section.has-light-background h1, section.has-light
   --r-selection-color: #fff;
 }
 
+.twitter-overlay {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  display: block;
+  width: 50%;
+}
+
+.twitter-overlay span {
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  color: #D3D3D3;
+  display: inline-block;
+  margin-right: 2.5%;
+  float: left;
+}
+
+.speaker-title {
+  display: flex;
+}
+
+.speaker-title .flex-1 {
+  flex: 1;
+}
+
+.speaker-title .flex-1 .circle {
+  border-radius: 50%;
+  width: 60%;
+}
+
+.speaker-title .flex-2 {
+  flex: 2;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.two-column-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.two-column-content .small, .two-column-content .smaller {
+  line-height: 2;
+}
+
+.small {
+  font-size: 80% !important;
+}
+
+.smaller {
+  font-size: 60% !important;
+}
+
+.large {
+  font-size: 150% !important;
+}
+
+.not-so-big {
+  font-size: 275%;
+}
+
+.scaled {
+  width: 50%;
+}
+
+.really-scaled {
+  width: 30%;
+}
+
+.kc-overlay {
+  position: absolute;
+  top: 25%;
+  left: 35%;
+}
+
+.reveal .decor {
+  color: var(--r-link-color);
+}
+.reveal .decor--bold {
+  font-weight: bold;
+}
+.reveal .decor--italic {
+  font-style: italic;
+}
+.reveal .decor--emphasis {
+  font-weight: bold;
+  font-style: italic;
+}
+
 .reveal-viewport {
   background: #282A36;
   background-color: var(--r-background-color);

@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>#ReviewTheCode | Getting Good at Code Reviews</title>
+
+		<meta name="description" content="Networking Your Way to Your Next Role - Slides">
+		<meta name="author" content="Rhia Dixon - @TheFakeRiRi">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/chalkboard.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<!-- Font Awesome CDN -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+			<section>
+				<h2>Getting Good at
+					<br>Code Reviews</h2>
+				<h3>Rhia Dixon</h3>
+			</section>
+
+			<!-- Sponsors -->
+			<!-- <section data-background="assets/sponsors/That-Conference-Branding-Slide.png">
+            </section> -->
+
+			<!-- <section data-background="assets/sponsors/That-Conference-Sponsors-Slide.png">
+            </section> -->
+
+			<!-- About Me -->
+			<section id="me">
+				<div class="speaker-title">
+					<div class="flex-1">
+						<img class="circle plain" src="assets/global/rhia-coffee.jpg" alt="Rhia Dixon headshot">
+					</div>
+					<div class="flex-2">
+						<div class="">
+							<h2>Rhia Dixon</h2>
+							<h3><a href="http://twitter.com/TheFakeRiRi">@TheFakeRiRi</a></h3>
+						</div>
+					</div>
+				</div>
+				<ul class="small">
+					<li>Leader of Devs</li>
+					<li>Ambassador @ KCWiT</li>
+					<li>Code Review KWEEN</li>
+				</ul>
+			</section>
+
+			<!-- Who Reviews PRs -->
+			<section id="who-reviews-prs">
+				<section>
+					<h2>Who reviews PRs?</h2>
+				</section>
+				<section>
+					<h2>I think <span class="decor decor--emphasis">EVERYONE</span> should...</h2>
+					<br>
+					<img src="assets/reviewthecode/rugrats/rugrats_mind_scary_place.gif"
+						 alt="Chuckie from the rugrats with text: My mind is a scary place." />
+				</section>
+				<section>
+					<blockquote><h3>"If you write code, you should review code."</h3></blockquote>
+					<p class="smaller">-- Your Favorite Code Review Kween</p>
+				</section>
+			</section>
+			<section id="what" data-transition="convex">
+				<section>
+					<h2>So <span class="decor">what</span> is code review?</h2>
+				</section>
+				<section>
+					<h2>Code Review is NOT...</h2>
+					<br>
+					<ul>
+						<li class="fragment">Only for code-owners and team leads</li>
+						<li class="fragment">About the developer(s)</li>
+						<li class="fragment">A forum for attacking and belittling people</li>
+						<li class="fragment">A process developers should opt-out of</li>
+					</ul>
+				</section>
+				<section data-transition="convex">
+					<h2>Code Review IS...</h2>
+					<br>
+					<ul>
+						<li class="fragment">A Quality Gate</li>
+						<li class="fragment">A Collaborative Learning Opportunity</li>
+						<li class="fragment">Thought Leadership</li>
+						<li class="fragment">A team effort</li>
+					</ul>
+				</section>
+			</section>
+
+			<!-- Benefits of Code Review -->
+			<section id="benefits" data-transition="convex">
+				<section>
+					<h2><span class="decor">Benefits</span> of Code Review</h2>
+				</section>
+				<section>
+					<h3>Learning the Codebase</h3>
+					<br>
+					<div class="two-column-content">
+						<div class="smaller flex-1">
+							<ul>
+								<li class="fragment">Rapid Onboarding</li>
+								<li class="fragment">Knowledge Sharing</li>
+								<li class="fragment">Reinforce industry/company standards</li>
+								<li class="fragment">Pattern (and anti pattern) recognition</li>
+							</ul>
+						</div>
+						<div class="flex-1"></div>
+						<img src="assets/reviewthecode/rugrats/rugrats_wow_really.gif"
+							 alt="Rugrats Phil looks shocked with text: Wow. Really?" />
+					</div>
+				</section>
+				<section>
+					<h2>Engage on the PR</h2>
+					<br>
+					<div class="two-column-content">
+						<div class="small">
+							<ul>
+								<li class="fragment">Ask a Question</li>
+								<li class="fragment">Request a Change</li>
+								<li class="fragment">Leave a Comment</li>
+							</ul>
+						</div>
+						<div class="flex-1"></div>
+						<div class="small">
+							<ul>
+								<li class="fragment">[Question]</li>
+								<li class="fragment">[Blocker | Change | Nit]</li>
+								<li class="fragment">[Comment]</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<section>
+					<h3>Quality & Consistent "-ilities"</h3>
+					<br>
+					<div class="two-column-content">
+						<div class="small flex-1">
+							<ul>
+								<li class="fragment">Applicability</li>
+								<li class="fragment">Maintainability</li>
+								<li class="fragment">Testability</li>
+								<li class="fragment">Accessibility</li>
+								<li class="fragment">Readability</li>
+								<li class="fragment">Search-ability</li>
+								<li class="fragment">Function-ability</li>
+							</ul>
+						</div>
+<!--						<div class="flex-1"></div>-->
+						<div class="flex-1">
+							<img src="assets/reviewthecode/rugrats/rugrats_responsibilities.gif"
+							 alt="Rugrats Angelica on a bed talking to the babies with text: Yeah, I got responsibilities now." />
+						</div>
+					</div>
+				</section>
+				<section>
+					<h2>Look for "-ilities"</h2>
+					<br>
+					<ul class="small">
+						<li class="fragment">What does this change do?</li>
+						<li class="fragment">Do functions and variables have suitable names?</li>
+						<li class="fragment">Does this have tests? Does it need them?</li>
+						<li class="fragment">Is it semantic? Are we impacting a11y?</li>
+						<li class="fragment">Are we following applicable standards?</li>
+					</ul>
+				</section>
+				<section>
+					<h3>Duplication Mitigation</h3>
+					<br>
+					<div class="two-column-content">
+						<div class="flex-1">
+							Why rewrite the
+							<br>
+							wheel if we
+							<br>
+							DO NOT HAVE TO?
+						</div>
+						<div class="flex-1"></div>
+						<img src="assets/reviewthecode/rugrats/rugrats_around_in_circles.gif"
+							 alt="Rugrats Tommy Pickles rolling around in circles on a beach ball." />
+					</div>
+				</section>
+			</section>
+
+			<!-- But, I have reasons -->
+			<section id="reasons" data-transition="convex">
+				<section>
+					<h2>But... I have <span class="decor">reasons</span>...</h2>
+				</section>
+				<section>
+					<h3>Uh-huh. Yeah. No.</h3>
+					<br>
+					<img src="assets/reviewthecode/rugrats/rugrats_unimpressed.gif"
+						 alt="Rugrats Susie looks unimpressed." />
+				</section>
+				<section data-transition="none">
+					<h3>
+						If you write code...?
+						<br>
+						<span class="fragment">Review the code.</span>
+					</h3>
+				</section>
+			</section>
+
+			<!-- Develop a Process -->
+			<section id="how" data-transition="convex">
+				<section>
+					<h2>Develop a <span class="decor">Process</span></h2>
+				</section>
+				<section>
+					<h3>Pre-Check It</h3>
+					<p class="fragment">Set a goal to meet 10 new people</p>
+				</section>
+				<section>
+					<h3>Read It</h3>
+					<p class="fragment">You don't know who or what they know yet</p>
+				</section>
+				<section>
+					<h3>Build It</h3>
+				</section>
+				<section>
+					<h3>If it looks good to you...?</h3>
+					<br>
+					<div class="two-column-content">
+						<div class="flex-1">
+							Approve it!
+						</div>
+						<div class="flex-1"></div>
+						<img src="assets/reviewthecode/rugrats/rugrats_you_first.gif"
+							 alt="Rugrats Tommy Pickles rolling around in circles on a beach ball." />
+					</div>
+				</section>
+			</section>
+
+			<!-- When and Where to Network -->
+			<section id="when" data-transition="convex">
+				<section>
+					<h2>Okay. We've covered:</h2>
+					<ul>
+						<li>
+							<h3><i class="fas fa-check fragment decor"></i> What</h3>
+						</li>
+						<li>
+							<h3><i class="fas fa-check fragment decor"></i> Why</h3>
+						</li>
+						<li>
+							<h3><i class="fas fa-check fragment decor"></i> Who</h3>
+						</li>
+						<li>
+							<h3><i class="fas fa-check fragment decor"></i> How</h3>
+						</li>
+					</ul>
+				</section>
+				<section>
+					<h2>When and where should we network?</h2>
+					<iframe src="https://giphy.com/embed/14mgxYFJHXGmoo" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+				</section>
+				<section>
+					<h2>All the time.</h2>
+					<h2 class="decor">
+						<span class="fragment" data-fragment-index="1">EH.</span>
+						<span class="fragment" data-fragment-index="2">VREE.</span>
+						<span class="fragment" data-fragment-index="3">WHERE.</span>
+					</h2>
+				</section>
+				<section>
+					<h3>Everywhere but funerals and bathrooms</h3>
+					<iframe src="https://giphy.com/embed/BIZkwFtu2xDlS" title="Justin is judging you." width="426" height="480" class="giphy-embed" allowFullScreen></iframe>
+				</section>
+				<section>
+					<h3>When opportunities arise...</h3>
+					<h2 class="fragment decor decor--italic">TAKE THEM</h2>
+				</section>
+				<section>
+					<h3>Awesome spots to network:</h3>
+					<div class="speaker-title">
+						<div class="flex-1">
+							<ul>
+								<li class="fragment">Conferences</li>
+								<li class="fragment">Meetups</li>
+								<li class="fragment">Shindigs</li>
+								<li class="fragment">Airports</li>
+							</ul>
+						</div>
+						<div class="flex-1">
+							<ul>
+								<li class="fragment">Elevators</li>
+								<li class="fragment">Coffeeshops</li>
+								<li class="fragment">Chipotle*</li>
+								<li class="fragment">Work</li>
+							</ul>
+						</div>
+						<div class="flex-1">
+							<ul>
+								<li class="fragment">LinkedIn</li>
+								<li class="fragment">Twitter</li>
+								<li class="fragment">Facebook</li>
+								<li class="fragment">Instagram</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+			</section>
+
+			<!-- Conclusion -->
+			<section id="major-keys" data-transition="convex">
+				<section>
+					<h2>Major Keys</h2>
+					<h3 class="fragment decor">COMMUNICATION</h3>
+					<h3 class="fragment decor">CONNECTION</h3>
+					<h3 class="fragment decor">FOLLOW THROUGH</h3>
+				</section>
+				<section>
+					<h2>More than a network, we're building...</h2>
+					<h2 class="fragment decor">a CONNECTwork!</h2>
+				</section>
+					<section>
+						<h2>You've GOT this!</h2>
+						<iframe src="https://giphy.com/embed/QycOwu2hUwPFEpoC9X" title="You've Got this!" width="480" height="235" class="giphy-embed" allowFullScreen></iframe>
+					</section>
+				</section>
+
+				<section id="questions" data-transition="convex">
+					<h2>Questions?</h2>
+					<div class="speaker-title">
+						<div class="flex-1">
+							<img src="assets/global/questions.jpeg" alt="Questions" style="max-height: auto; max-width: 50%;">
+						</div>
+					</div>
+					<h5>Slides available at: <a href="https://www.rhiadixon.com/CONNECTwork">https://www.rhiadixon.com/talks/connectwork.html</a></h5>
+				</section>
+			</div>
+		</div>
+		<div class="twitter-overlay">
+			<span><i class="fab fa-twitter"></i> <i class="fab fa-instagram"></i></span><span>@TheFakeRiRi</span> <span>#CONNECTwork</span><span></span>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
